@@ -476,3 +476,9 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
   .svc-verify .svc-feats { border-top: 0; padding: 22px 20px; }
   .svc-seed .svc-feats, .svc-clear .svc-feats { grid-row: auto; grid-column: auto; padding: 22px 20px; }
 }
+
+/* feature box runs the full height of the card content: top with the badge, bottom with the video / io pills */
+@media (min-width: 901px) {
+  .svc-verify .svc-feats, .svc-seed .svc-feats, .svc-clear .svc-feats { align-self: stretch; align-content: center; }
+  .svc-verify .svc-video { align-self: end; }
+}
