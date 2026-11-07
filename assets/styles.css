@@ -531,3 +531,59 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
   .fl li.link { display: none; }
   .fl li:not(.end):not(.to-verify):not(.link):not(.pre-link)::after, .fl li.pre-link::after { content: "›"; position: static; transform: none; margin: 0 8px; font-size: 20px; line-height: 1; color: rgba(14, 27, 61, .4); }
 }
+
+/* vision: three equal service cards, input -> process -> output */
+.fc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.fc-card { position: relative; display: flex; flex-direction: column; background: var(--white); border-radius: 18px; padding: 24px 24px 22px; box-shadow: 0 6px 20px rgba(14, 27, 61, .06), inset 0 0 0 1px var(--line); }
+.fc-top { display: flex; align-items: center; justify-content: space-between; margin: 0 0 14px; }
+.fc-num { font-size: 22px; font-weight: 700; color: var(--teal); letter-spacing: .02em; }
+.fc-status { font-size: 11px; font-weight: 700; border-radius: 999px; padding: 2px 10px; }
+.fc-soon { color: var(--white); background: var(--orange); }
+.fc-live { color: var(--white); background: var(--teal-dark); }
+.fc-name { display: flex; align-items: center; gap: 12px; margin: 0 0 12px; }
+.fc-name > span { display: flex; flex-direction: column; line-height: 1.2; }
+.fc-name b { font-size: 20px; color: var(--navy); }
+.fc-name small { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.fc-ico { flex: none; width: 40px; height: 40px; padding: 8px; border-radius: 12px; background: #D6F1ED; color: var(--teal-dark); }
+.fc-card h3 { font-size: 17px; line-height: 1.45; color: var(--navy); margin: 0 0 16px; }
+.fc-io { display: flex; align-items: baseline; gap: 10px; margin: 0; padding: 10px 14px; border-radius: 12px; background: var(--teal-tint); }
+.fc-io dt { flex: none; font-size: 11px; font-weight: 700; color: var(--white); background: var(--teal-dark); border-radius: 999px; padding: 2px 9px; }
+.fc-io dd { margin: 0; font-size: 14px; font-weight: 600; color: var(--navy); }
+.fc-steps { list-style: none; margin: 0; padding: 12px 0 12px 14px; display: grid; gap: 8px; }
+.fc-steps li { position: relative; padding-left: 20px; font-size: 14px; color: var(--ink); line-height: 1.5; }
+.fc-steps li::before { content: "↓"; position: absolute; left: 0; top: 0; color: var(--teal); font-weight: 700; }
+.fc-steps li:first-child::before { content: "↓"; }
+.fc-next { margin: 16px 0 0; padding-top: 0; margin-top: auto; }
+.fc-out { margin-bottom: 16px; }
+.fc-next { display: block; text-align: center; font-size: 14px; font-weight: 700; border-radius: 999px; padding: 10px 14px; }
+.fc-next.to-attorney { background: var(--teal); color: var(--navy); }
+.fc-next.to-verify { background: transparent; color: var(--teal-dark); box-shadow: inset 0 0 0 1.5px var(--teal); }
+/* Seed hands over to Verify: arrow between the first two cards */
+.fc-seed::after { content: "›"; position: absolute; right: -27px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: var(--teal); color: var(--white); font-size: 18px; font-weight: 700; line-height: 1; z-index: 1; }
+@media (min-width: 1800px) {
+  .fc-card h3 { font-size: 19px; }
+  .fc-steps li, .fc-io dd, .fc-next { font-size: 15.5px; }
+}
+@media (max-width: 1100px) {
+  .fc { grid-template-columns: 1fr; gap: 30px; }
+  .fc-seed::after { content: "›"; right: auto; left: 50%; top: auto; bottom: -27px; transform: translateX(-50%) rotate(90deg); }
+}
+
+/* services: comparison table */
+.cmp-wrap { overflow-x: auto; margin: 0 0 32px; }
+.cmp { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--white); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; font-size: 15px; }
+.cmp th, .cmp td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); }
+.cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: 0; }
+.cmp thead th { background: var(--navy); color: var(--white); font-size: 16px; }
+.cmp tbody th { width: 18%; color: var(--muted); font-weight: 600; background: var(--bg); }
+.cmp td { color: var(--navy); font-weight: 600; }
+@media (max-width: 560px) {
+  .cmp { font-size: 13px; }
+  .cmp th, .cmp td { padding: 10px 10px; }
+  .cmp thead th { font-size: 14px; }
+}
+/* show the "process" label between input and output */
+.fc-steps::before { content: attr(aria-label); justify-self: start; margin: 0 0 2px -14px; font-size: 11px; font-weight: 700; color: var(--teal-dark); border-radius: 999px; padding: 1px 9px; box-shadow: inset 0 0 0 1.5px var(--teal); }
+@media (min-width: 1101px) { .fc-card h3 { min-height: 2.9em; } }
+.cmp { table-layout: fixed; } .cmp th, .cmp td { white-space: normal; word-break: normal; overflow-wrap: anywhere; } @media (max-width: 560px) { .cmp tbody th { width: 22%; } .cmp th, .cmp td { padding: 9px 7px; font-size: 12px; } }
+.cmp th, .cmp td { overflow-wrap: break-word; hyphens: auto; } body.ja .cmp th, body.ja .cmp td { word-break: auto-phrase; }
