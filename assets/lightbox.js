@@ -26,3 +26,22 @@
     });
   });
 })();
+
+// Case video in the Verify card plays in place, at the size it is shown.
+(function () {
+  document.querySelectorAll('[data-inline]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var box = document.createElement('div');
+      box.className = btn.className + ' is-playing';
+      var v = document.createElement('video');
+      v.controls = true; v.autoplay = true; v.playsInline = true;
+      v.poster = btn.getAttribute('data-poster') || '';
+      v.setAttribute('aria-label', btn.getAttribute('data-caption') || '');
+      var s = document.createElement('source');
+      s.src = btn.getAttribute('data-inline'); s.type = 'video/mp4';
+      v.appendChild(s); box.appendChild(v);
+      btn.replaceWith(box);
+      var p = v.play(); if (p && p.catch) p.catch(function () {});
+    });
+  });
+})();

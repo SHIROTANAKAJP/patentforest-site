@@ -460,3 +460,7 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
 
 /* keep the input/output label on one line */
 .svc-io dt { flex: none; white-space: nowrap; }
+
+/* case video playing inside the Verify card */
+.svc-video.is-playing { cursor: auto; background: #000; }
+.svc-video.is-playing video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
