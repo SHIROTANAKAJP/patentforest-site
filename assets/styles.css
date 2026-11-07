@@ -280,3 +280,6 @@ section { scroll-margin-top: 64px; }
   .cap .thumb { grid-column: 2; max-width: 240px; }
 }
 @media (max-width: 720px) { .cap .thumb { max-width: 160px; } .cap .thumb img { height: 90px; } }
+
+/* keep phrase groups together when the hero title wraps */
+.nw{display:inline-block;white-space:nowrap}
