@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=11">
+<link rel="stylesheet" href="assets/styles.css?v=13">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
     <a class="logo" href="#top"><img src="assets/logo-on-dark.png" alt="Patentforest"></a>
     <nav>
       <a class="hide-sm" href="#accuracy">Accuracy</a>
-      <a class="hide-sm" href="#features">What it does</a>
+      <a class="hide-sm" href="#services">Services</a>
       <a class="hide-sm" href="#trust">Security</a>
       <a class="hide-sm" href="#plans">Plans</a>
       <a class="hide-sm" href="#faq">FAQ</a>
@@ -60,19 +60,19 @@
       <p class="lanes-cap">Patentforest supports your innovation.</p>
       <div class="fx">
         <ol class="fx-row fx-r1">
-          <li class="in"><span>Idea input</span></li>
+          <li class="in"><span><b>Verify</b>Idea input</span></li>
           <li class="hub"><span>Prior-patent search</span></li>
           <li><span>Mapping</span></li>
           <li><span>Examination simulation</span></li>
           <li class="end-m"><span>To a patent attorney</span></li>
         </ol>
         <ol class="fx-row fx-r2">
-          <li class="in"><span>Goal input<em>Coming soon</em></span></li>
+          <li class="in"><span><b>Seed</b>Goal input<em>Coming soon</em></span></li>
           <li class="up"><span>Search 5 other fields at once</span></li>
           <li class="end-m join"><span>Joins prior-patent search</span></li>
         </ol>
         <ol class="fx-row fx-r3">
-          <li class="in"><span>Product spec input<em>Coming soon</em></span></li>
+          <li class="in"><span><b>Clear</b>Product spec input<em>Coming soon</em></span></li>
           <li><span>Third-party patent search</span></li>
           <li class="wide"><span>Claim-element comparison</span></li>
           <li class="end-m"><span>To a patent attorney</span></li>
@@ -98,42 +98,57 @@
   </div>
 </section>
 
-<section id="features">
+<section id="services">
   <div class="wrap">
-    <p class="eyebrow">What Patentforest does</p>
-    <h2>From idea input to analysis and report, in one flow</h2>
-    <div class="caps">
-      <div class="cap">
-        <div class="icon">01</div>
-        <div><h3>Break your idea into elements</h3><p>Enter your idea and its elements are extracted automatically.</p></div>
-        <button class="thumb" type="button" data-popup="assets/v9/en/claims.png" data-caption="Automatic element extraction"><img src="assets/v9/en/claims.png" alt="Element extraction example"><span>Example ⤢</span></button>
-      </div>
-      <div class="cap">
-        <div class="icon">02</div>
-        <div><h3>Search prior art</h3><p>Searches at the element level. 80% of ISR-cited documents appear in the top 50 results (internal study). Shows where your technology sits on a patent map.</p></div>
-        <button class="thumb" type="button" data-popup="assets/v9/en/search.png" data-caption="Prior-art search"><img src="assets/v9/en/search.png" alt="Prior-art search example"><span>Example ⤢</span></button>
-      </div>
-      <div class="cap">
-        <div class="icon">03</div>
-        <div><h3>Overlap check</h3><p>Compares each element with prior art and scores the overlap, taking into account physical and scientific necessity and conceptual inclusion.</p></div>
-        <button class="thumb" type="button" data-popup="assets/v9/en/combination.png" data-caption="Claim chart: element-by-element comparison"><img src="assets/v9/en/combination.png" alt="Claim chart example"><span>Example ⤢</span></button>
-      </div>
-      <div class="cap">
-        <div class="icon">04</div>
-        <div><h3>Leap check</h3><p>Scores the distance from existing technology as a leap score, based on combinations of documents. Together with the overlap score, results are organized into X / Y / A.</p></div>
-        <button class="thumb" type="button" data-popup="assets/v9/en/combination.png" data-caption="Document combinations, with paragraph numbers"><img src="assets/v9/en/combination.png" alt="Combination analysis example" style="object-position: top right"><span>Example ⤢</span></button>
-      </div>
-      <div class="cap">
-        <div class="icon">05</div>
-        <div><h3>Technical search report</h3><p>Elements, analysis and prior art in 3 columns, with the relevant passages highlighted in color. Quick to review, and exportable to PDF.</p></div>
-        <button class="thumb" type="button" data-popup="assets/v9/en/report.png" data-caption="Technical search report"><img src="assets/v9/en/report.png" alt="Report example"><span>Example ⤢</span></button>
-      </div>
-      <div class="cap">
-        <div class="icon">06</div>
-        <div><h3>Use the results in the next step</h3><p>Feed results back to inventors or claim-drafting AI to help reduce overlap and increase the leap. (Patentforest does not draft claims or responses.)</p></div>
-        <button class="thumb video" type="button" data-popup="assets/video/case-oxyhalide.mp4" data-poster="assets/video/case-oxyhalide-poster.jpg" data-caption="Case study: an oxyhalide solid electrolyte (about 50 seconds)"><img src="assets/video/case-oxyhalide-poster.jpg" alt="Case study video"><span>▶ Case study</span></button>
-      </div>
+    <p class="eyebrow">Services</p>
+    <h2>Three services, three starting points</h2>
+    <p class="svc-intro">Start from an idea, a goal or a product. Wherever you start, the result goes to your patent attorney.</p>
+  <article class="svc svc-verify" id="verify">
+    <div class="svc-main">
+      <div class="svc-badge"><span class="svc-logo" aria-hidden="true">V</span><div><b>Patentforest Verify</b><small>Idea validation</small></div></div>
+      <h3>Enter an idea, get everything from prior-patent search to examination simulation</h3>
+      <p>Your idea is broken into elements, then Verify searches prior patents, places the idea on a patent map, and scores overlap and leap in one run. Results are organized in the same X / Y / A categories as an International Search Report (ISR).</p>
+      <dl class="svc-io"><div><dt>Input</dt><dd>An idea (text)</dd></div><div><dt>Output</dt><dd>Technical search report (PDF)</dd></div></dl>
     </div>
+    <button class="svc-video" type="button" data-popup="assets/video/case-oxyhalide.mp4" data-poster="assets/video/case-oxyhalide-poster.jpg" data-caption="Case study: an oxyhalide solid electrolyte (about 50 seconds)"><img src="assets/video/case-oxyhalide-poster.jpg" alt="Case study video"><span>▶ Watch the case study (50 s)</span></button>
+    <ul class="svc-feats">
+      <li><b>Element breakdown</b>Elements are extracted from your idea automatically.</li>
+      <li><b>Prior-patent search</b>Searches at the element level. 80% of ISR-cited documents appear in the top 50 results (internal study).</li>
+      <li><b>Mapping</b>Shows where your technology sits on a patent map.</li>
+      <li><b>Overlap check</b>Compares each element with prior art and scores the overlap, taking into account physical and scientific necessity and conceptual inclusion.</li>
+      <li><b>Leap check</b>Scores the distance from existing technology based on combinations of documents. Together with overlap, results are organized into X / Y / A.</li>
+      <li><b>Technical search report</b>Elements, analysis and prior art in 3 columns, with relevant passages highlighted in color. Export to PDF.</li>
+      <li><b>Next steps</b>Feed results back to inventors or claim-drafting AI to help reduce overlap and increase the leap. (Patentforest does not draft claims or responses.)</li>
+    </ul>
+  </article>
+  <article class="svc svc-seed" id="seed">
+    <div class="svc-main">
+      <div class="svc-badge"><span class="svc-logo" aria-hidden="true">S</span><div><b>Patentforest Seed</b><small>Ideation</small></div><span class="svc-tag">Coming soon</span></div>
+      <h3>Start from what you want to do</h3>
+      <p>Enter a goal such as “put out wildfires early with drones”. Seed searches 5 other fields at once, gathers their elements and builds a list of idea elements. The idea then goes straight into Verify.</p>
+      <dl class="svc-io"><div><dt>Input</dt><dd>A goal (text)</dd></div><div><dt>Output</dt><dd>Idea element list → Verify</dd></div></dl>
+    </div>
+
+    <ul class="svc-feats">
+      <li><b>Search 5 other fields at once</b>Let Seed choose the fields, or pick them from CPC technology areas.</li>
+      <li><b>Idea element list</b>Output is a list of elements, not a claim.</li>
+      <li><b>Straight into Verify</b>Run the new idea through prior-patent search and examination simulation.</li>
+    </ul>
+  </article>
+  <article class="svc svc-clear" id="clear">
+    <div class="svc-main">
+      <div class="svc-badge"><span class="svc-logo" aria-hidden="true">C</span><div><b>Patentforest Clear</b><small>FTO search</small></div><span class="svc-tag">Coming soon</span></div>
+      <h3>Check third-party patents before you launch</h3>
+      <p>Enter a product specification. Clear breaks it into technical elements, searches third-party patents and compares the product with the claim elements of thousands of patents. Results are ranked by coverage score so your patent attorney knows which patents to review.</p>
+      <dl class="svc-io"><div><dt>Input</dt><dd>Product specification</dd></div><div><dt>Output</dt><dd>Claim-element comparison (coverage score)</dd></div></dl>
+    </div>
+
+    <ul class="svc-feats">
+      <li><b>Technical elements and patent search</b>Extracts technical elements from the specification and searches related third-party patents.</li>
+      <li><b>Comparison with thousands of claims</b>Compares claim element by claim element and ranks by coverage score.</li>
+      <li><b>To a patent attorney</b>Clear does not judge infringement. Please consult a patent attorney about the patents it surfaces.</li>
+    </ul>
+  </article>
   </div>
 </section>
 
