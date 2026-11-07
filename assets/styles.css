@@ -314,7 +314,7 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
 .fx li.hub span { box-shadow: 0 0 0 2.5px var(--teal); }
 .fx em { display: inline-block; margin-top: 4px; font-style: normal; font-size: 10.5px; font-weight: 700; color: var(--white); background: var(--orange); border-radius: 999px; padding: 1px 8px; }
 .fx-end { grid-column: 5; grid-row: 1 / 4; display: flex; }
-.fx-end span { background: #DCE6FA; color: #1F3F7A; box-shadow: inset 0 0 0 1.5px #A9BCE3; font-size: 16px; font-weight: 700; }
+.fx-end span { background: var(--teal); color: var(--navy); box-shadow: none; font-size: 16px; font-weight: 700; }
 /* arrows */
 .fx-r1 li:nth-child(-n+4)::after, .fx-r2 li.in::after, .fx-r3 li:nth-child(-n+3)::after {
   content: "›"; position: absolute; right: -19px; top: 50%; transform: translateY(-50%);
@@ -332,7 +332,7 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
   .fx em { margin: 0 0 0 6px; }
   .fx li.in span { flex-direction: row; }
   .fx li.end-m { display: flex; }
-  .fx li.end-m span { background: #DCE6FA; color: #1F3F7A; box-shadow: inset 0 0 0 1.5px #A9BCE3; font-weight: 700; }
+  .fx li.end-m span { background: var(--teal); color: var(--navy); box-shadow: none; font-weight: 700; }
   .fx li.join span { background: transparent; color: var(--teal-dark); box-shadow: inset 0 0 0 1.5px var(--teal); }
   .fx-end { display: none; }
   .fx li.up::before { display: none; }
