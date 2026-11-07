@@ -439,3 +439,8 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
 /* Verify chip: two-line label on desktop, one line in the stacked layout */
 .fx li.in i { font-style: normal; }
 @media (max-width: 1100px) { .fx li.in i br { display: none; } }
+
+/* hero tagline under the h1 */
+.hero .tagline { margin: 0 0 14px; font-size: clamp(20px, 2.4vw, 28px); font-weight: 700; line-height: 1.4; color: var(--teal); }
+.hero h1 + .tagline { margin-top: -4px; }
+@media (min-width: 1800px) { .hero .tagline { font-size: 32px; } }
