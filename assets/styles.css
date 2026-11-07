@@ -482,3 +482,48 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
   .svc-verify .svc-feats, .svc-seed .svc-feats, .svc-clear .svc-feats { align-self: stretch; align-content: center; }
   .svc-verify .svc-video { align-self: end; }
 }
+
+/* vision diagram v2: service name as a row label, boxes are work steps only */
+.fl { display: grid; grid-template-columns: 128px repeat(5, minmax(0, 1fr)) minmax(0, .9fr); column-gap: 26px; row-gap: 18px; align-items: stretch; }
+.fl-row, .fl-row ol { display: contents; }
+.fl-row ol { list-style: none; }
+.fl-name { grid-column: 1; margin: 0; display: flex; flex-direction: column; justify-content: center; line-height: 1.25; }
+.fl-name b { font-size: 18px; color: var(--navy); }
+.fl-name small { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.fl-name em { align-self: flex-start; margin-top: 6px; font-style: normal; font-size: 10.5px; font-weight: 700; color: var(--white); background: var(--orange); border-radius: 999px; padding: 1px 8px; }
+.fl li { position: relative; display: flex; }
+.fl li.span2 { grid-column: span 2; }
+.fl li.span3 { grid-column: span 3; }
+.fl li.end { grid-column: 7; }
+.fl li span {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 60px; padding: 8px 10px; border-radius: 14px; background: var(--white); color: var(--navy);
+  font-size: 14px; font-weight: 600; line-height: 1.35; text-align: center; box-shadow: inset 0 0 0 1px var(--line);
+}
+.fl li.in span { background: #D6F1ED; color: #0A6F67; box-shadow: none; }
+.fl li.end span { background: var(--teal); color: var(--navy); box-shadow: none; font-weight: 700; }
+.fl li.to-verify span { background: transparent; color: var(--teal-dark); box-shadow: inset 0 0 0 1.5px var(--teal); }
+.fl li:not(.end)::after {
+  content: "›"; position: absolute; right: -18px; top: 50%; transform: translateY(-50%);
+  font-size: 22px; line-height: 1; color: rgba(14, 27, 61, .4);
+}
+.fl-row + .fl-row .fl-name, .fl-row + .fl-row li { position: relative; }
+@media (min-width: 1800px) {
+  .fl { grid-template-columns: 150px repeat(5, minmax(0, 1fr)) minmax(0, .9fr); }
+  .fl li span { font-size: 15.5px; min-height: 66px; }
+  .fl-name b { font-size: 20px; }
+}
+@media (max-width: 1100px) {
+  .fl { display: block; }
+  .fl-row { display: block; }
+  .fl-row + .fl-row { margin-top: 16px; padding-top: 16px; border-top: 1px dashed #C9D6E6; }
+  .fl-name { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin-bottom: 10px; }
+  .fl-name b { font-size: 16px; }
+  .fl-name em { align-self: center; margin: 0; }
+  .fl-row ol { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 0; margin: 0; padding: 0; }
+  .fl li { align-items: center; }
+  .fl li span { flex: none; min-height: 0; padding: 6px 12px; border-radius: 999px; font-size: 13px; }
+  .fl li:not(.end)::after { position: static; transform: none; margin: 0 8px; font-size: 20px; }
+}
+@media (max-width: 1100px) { .fl li span { display: block; } .fl li span br { display: none; } }
+@media (max-width: 1100px) { .fl-name { justify-content: flex-start; } }
