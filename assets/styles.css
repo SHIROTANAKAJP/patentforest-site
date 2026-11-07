@@ -464,3 +464,15 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
 /* case video playing inside the Verify card */
 .svc-video.is-playing { cursor: auto; background: #000; }
 .svc-video.is-playing video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+
+/* all three service cards: same column split, feature list in the same shaded box at the same position */
+.svc, .svc-verify { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.svc-verify .svc-feats, .svc-seed .svc-feats, .svc-clear .svc-feats {
+  align-self: start; background: var(--bg); border: 0; border-radius: 14px; padding: 24px 24px 24px 26px; gap: 18px;
+}
+.svc-seed .svc-feats, .svc-clear .svc-feats { grid-row: 1; grid-column: 2; }
+@media (max-width: 900px) {
+  .svc, .svc-verify { grid-template-columns: 1fr; }
+  .svc-verify .svc-feats { border-top: 0; padding: 22px 20px; }
+  .svc-seed .svc-feats, .svc-clear .svc-feats { grid-row: auto; grid-column: auto; padding: 22px 20px; }
+}
