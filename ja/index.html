@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/styles.css?v=8">
+<link rel="stylesheet" href="../assets/styles.css?v=9">
 </head>
 <body class="ja">
 
@@ -26,8 +26,8 @@
   <div class="wrap">
     <a class="logo" href="#top"><img src="../assets/logo-on-dark.png" alt="Patentforest"></a>
     <nav>
-      <a class="hide-sm" href="#features">できること</a>
       <a class="hide-sm" href="#accuracy">精度</a>
+      <a class="hide-sm" href="#features">できること</a>
       <a class="hide-sm" href="#trust">セキュリティ</a>
       <a class="hide-sm" href="#plans">プラン</a>
       <a class="hide-sm" href="#faq">よくある質問</a>
@@ -91,6 +91,21 @@
   </div>
 </section>
 
+<section id="accuracy" style="background:var(--white)">
+  <div class="wrap">
+    <p class="eyebrow">アルゴリズム</p>
+    <h2>高性能アルゴリズム搭載</h2>
+    <p class="sub-h">ISRがXとした項は全項一致、全体の一致率は94%</p>
+    <div class="stat-row">
+      <div class="card"><div class="v">100<small>%</small></div><p>ISRがXの項の一致率（42/42）</p></div>
+      <div class="card"><div class="v">70<small>%</small></div><p>ISRがY・Aの項の一致率（7/10）</p></div>
+      <div class="card"><div class="v">94<small>%</small></div><p>全体の一致率（49/52）</p></div>
+    </div>
+    <p class="note">※ Y・Aの区分は、組合せロジックの見直しと技術常識（CGK）ライブラリの拡充により、精度向上を継続中です。分析結果には誤りが含まれる場合があります。<br>
+    社内調べ</p>
+  </div>
+</section>
+
 <section id="features">
   <div class="wrap">
     <p class="eyebrow">Patentforestでできること</p>
@@ -130,21 +145,7 @@
   </div>
 </section>
 
-<section id="accuracy" style="background:var(--white)">
-  <div class="wrap">
-    <p class="eyebrow">分析精度</p>
-    <h2>ISRがXとした項は全項一致、全体の一致率は94%</h2>
-    <div class="stat-row">
-      <div class="card"><div class="v">100<small>%</small></div><p>ISRがXの項の一致率（42/42）</p></div>
-      <div class="card"><div class="v">70<small>%</small></div><p>ISRがY・Aの項の一致率（7/10）</p></div>
-      <div class="card"><div class="v">94<small>%</small></div><p>全体の一致率（49/52）</p></div>
-    </div>
-    <p class="note">※ Y・Aの区分は、組合せロジックの見直しと技術常識（CGK）ライブラリの拡充により、精度向上を継続中です。分析結果には誤りが含まれる場合があります。<br>
-    集計対象：社内検証。国際出願と対比文献の組合せ5件、計52項。各項にアルゴリズムが付けた区分を、ISR（Box C）の区分X・Y・Aと比較。</p>
-  </div>
-</section>
-
-<section id="trust">
+<section id="trust" style="background:var(--white)">
   <div class="wrap">
     <p class="eyebrow">守秘</p>
     <h2>出願前の発明を扱う前提で設計</h2>
