@@ -482,43 +482,63 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
   .svc-verify .svc-video { align-self: end; }
 }
 
-/* vision diagram v3: service name as a row label, equal-width step boxes, icons on the input box */
-.fl { display: grid; grid-template-columns: max-content minmax(0, 1.25fr) repeat(5, minmax(0, 1fr)); column-gap: 26px; row-gap: 18px; align-items: stretch; }
-.fl-row, .fl-row ol { display: contents; }
-.fl-row ol { list-style: none; }
-.fl-name { grid-column: 1; margin: 0; display: flex; flex-direction: column; justify-content: center; line-height: 1.25; }
+/* vision diagram v5: three entry points converge on a shared engine (element + examination algorithms) */
+.eng { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 2.2fr) minmax(0, 1.3fr) minmax(0, 1fr); column-gap: 46px; align-items: stretch; }
+.eng > * { position: relative; }
+.eng > :not(:last-child)::after {
+  content: "›"; position: absolute; right: -29px; top: 50%; transform: translateY(-50%);
+  font-size: 24px; line-height: 1; color: rgba(14, 27, 61, .4);
+}
+.eng-in { display: grid; grid-template-columns: max-content minmax(0, 1fr); grid-auto-rows: 64px; column-gap: 20px; row-gap: 14px; align-self: center; }
+.eng > .eng-in::after { right: -40px; }
+.eng-in::before { content: ""; position: absolute; right: -16px; top: 32px; bottom: 32px; width: 1.5px; background: rgba(14, 27, 61, .3); }
+.eng-in .eng-box { position: relative; }
+.eng-in .eng-box::after { content: ""; position: absolute; right: -16px; top: 50%; width: 16px; height: 1.5px; background: rgba(14, 27, 61, .3); }
+.fl-name { margin: 0; display: flex; flex-direction: column; justify-content: center; line-height: 1.25; }
 .fl-name b { font-size: 18px; color: var(--navy); }
 .fl-name small { font-size: 12px; color: var(--muted); margin-top: 2px; }
-.fl li { position: relative; display: flex; }
-.fl li span {
-  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  min-height: 60px; padding: 8px 10px; border-radius: 14px; background: var(--white); color: var(--navy);
+.eng-box {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  min-height: 64px; padding: 8px 12px; border-radius: 14px; background: var(--white); color: var(--navy);
   font-size: 14px; font-weight: 600; line-height: 1.35; text-align: center; box-shadow: inset 0 0 0 1px var(--line);
 }
-.fl li span i { font-style: normal; }
-.fl li.in span { flex-direction: row; gap: 10px; background: #D6F1ED; color: #0A6F67; box-shadow: none; text-align: left; }
+.eng-box b { font-size: 15px; font-weight: 700; }
+.eng-box small { font-size: 13px; font-weight: 500; color: var(--muted); }
+.eng-box i { font-style: normal; }
+.eng-box.in { flex-direction: row; gap: 10px; background: #D6F1ED; color: #0A6F67; box-shadow: none; }
 .fl-ico { flex: none; width: 26px; height: 26px; color: var(--teal-dark); }
-.fl li.to-verify span { background: transparent; color: var(--teal-dark); box-shadow: inset 0 0 0 1.5px var(--teal); font-weight: 700; }
-.fl li:not(:last-child)::after {
-  content: "›"; position: absolute; right: -18px; top: 50%; transform: translateY(-50%);
-  font-size: 22px; line-height: 1; color: rgba(14, 27, 61, .4);
-}
+.eng-grp { display: flex; flex-direction: column; padding: 16px 16px 18px; border-radius: 20px; border: 1.5px solid rgba(14, 27, 61, .28); background: rgba(255, 255, 255, .35); }
+.eng-h { margin: 0 0 12px; text-align: center; font-size: 16px; font-weight: 700; color: var(--navy); }
+.eng-boxes { flex: 1; display: flex; gap: 28px; }
+.eng-boxes .eng-box { position: relative; }
+.eng-boxes .eng-box + .eng-box::before { content: "›"; position: absolute; left: -19px; top: 50%; transform: translateY(-50%); font-size: 22px; line-height: 1; color: rgba(14, 27, 61, .4); }
+.eng-core { border: 2px solid var(--teal); background: rgba(31, 181, 168, .06); }
+.eng-core .eng-h { color: var(--teal-dark); }
+.eng-out { display: flex; }
+.eng-box.end { background: var(--teal); color: var(--navy); box-shadow: none; }
+.eng-box.end b { font-size: 16px; }
 .lanes-note { margin: 22px 0 0; font-size: 13px; color: var(--muted); }
 @media (min-width: 1800px) {
-  .fl li span { font-size: 15.5px; min-height: 66px; }
+  .eng-box { font-size: 15.5px; min-height: 72px; }
+  .eng-box b { font-size: 16.5px; }
+  .eng-in { grid-auto-rows: 72px; }
+  .eng-in::before { top: 36px; bottom: 36px; }
   .fl-name b { font-size: 20px; }
+  .eng-h { font-size: 17px; }
   .fl-ico { width: 30px; height: 30px; }
 }
 @media (max-width: 1100px) {
-  .fl { display: block; }
-  .fl-row { display: block; }
-  .fl-row + .fl-row { margin-top: 16px; padding-top: 16px; border-top: 1px dashed #C9D6E6; }
-  .fl-name { flex-direction: row; flex-wrap: wrap; align-items: baseline; justify-content: flex-start; gap: 4px 8px; margin-bottom: 10px; }
+  .eng { display: flex; flex-direction: column; gap: 34px; }
+  .eng > :not(:last-child)::after, .eng > .eng-in::after { right: auto; left: 50%; top: auto; bottom: -27px; transform: translateX(-50%) rotate(90deg); }
+  .eng-in { grid-auto-rows: auto; align-self: stretch; row-gap: 10px; }
+  .eng-in::before, .eng-in .eng-box::after { display: none; }
+  .eng-in { column-gap: 14px; }
   .fl-name b { font-size: 16px; }
-  .fl-row ol { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 0; margin: 0; padding: 0; }
-  .fl li { align-items: center; }
-  .fl li span, .fl li.in span { flex: none; display: flex; flex-direction: row; align-items: center; gap: 6px; min-height: 0; padding: 6px 12px; border-radius: 999px; font-size: 13px; }
-  .fl li span br { display: none; }
-  .fl-ico { width: 16px; height: 16px; }
-  .fl li:not(:last-child)::after { content: "›"; position: static; transform: none; margin: 0 8px; font-size: 20px; line-height: 1; color: rgba(14, 27, 61, .4); }
+  .eng-box { min-height: 48px; padding: 8px 12px; }
+  .eng-box br { display: none; }
+  .eng-box.in { justify-content: flex-start; }
+  .fl-ico { width: 20px; height: 20px; }
+  .eng-boxes { gap: 26px; }
+  .eng-box b { font-size: 14px; }
+  .eng-box small { font-size: 12px; }
 }
