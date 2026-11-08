@@ -483,7 +483,7 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
 }
 
 /* vision diagram v5: three entry points converge on a shared engine (element + examination algorithms) */
-.eng { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 2.2fr) minmax(0, 1.3fr) minmax(0, 1fr); column-gap: 46px; align-items: stretch; }
+.eng { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 2.1fr) minmax(0, 1.3fr) minmax(0, .8fr); column-gap: 46px; align-items: stretch; }
 .eng > * { position: relative; }
 .eng > :not(:last-child)::after {
   content: "›"; position: absolute; right: -29px; top: 50%; transform: translateY(-50%);
@@ -505,12 +505,12 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
 .eng-box b { font-size: 15px; font-weight: 700; }
 .eng-box small { font-size: 13px; font-weight: 500; color: var(--muted); }
 .eng-box i { font-style: normal; }
-.eng-box.in { flex-direction: row; gap: 10px; background: #D6F1ED; color: #0A6F67; box-shadow: none; }
+.eng-box.in { flex-direction: row; justify-content: flex-start; gap: 12px; padding-left: 18px; background: #D6F1ED; color: #0A6F67; box-shadow: none; text-align: left; }
 .fl-ico { flex: none; width: 26px; height: 26px; color: var(--teal-dark); }
 .eng-grp { display: flex; flex-direction: column; padding: 16px 16px 18px; border-radius: 20px; border: 1.5px solid rgba(14, 27, 61, .28); background: rgba(255, 255, 255, .35); }
-.eng-h { margin: 0 0 12px; text-align: center; font-size: 16px; font-weight: 700; color: var(--navy); }
+.eng-h { margin: 0 0 12px; text-align: center; white-space: nowrap; font-size: clamp(14px, 1.15vw, 16px); font-weight: 700; color: var(--navy); }
 .eng-boxes { flex: 1; display: flex; gap: 28px; }
-.eng-boxes .eng-box { position: relative; }
+.eng-boxes .eng-box { position: relative; padding-left: 8px; padding-right: 8px; }
 .eng-boxes .eng-box + .eng-box::before { content: "›"; position: absolute; left: -19px; top: 50%; transform: translateY(-50%); font-size: 22px; line-height: 1; color: rgba(14, 27, 61, .4); }
 .eng-core { border: 2px solid var(--teal); background: rgba(31, 181, 168, .06); }
 .eng-core .eng-h { color: var(--teal-dark); }
