@@ -515,7 +515,7 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
 .eng-core { border: 2px solid var(--teal); background: rgba(31, 181, 168, .06); }
 .eng-core .eng-h { color: var(--teal-dark); }
 .eng-out { display: flex; }
-.eng-box.end { background: var(--teal); color: var(--navy); box-shadow: none; }
+.eng-box.end { background: #D6F1ED; color: #0A6F67; box-shadow: none; }
 .eng-box.end b { font-size: 16px; }
 .lanes-note { margin: 22px 0 0; font-size: 13px; color: var(--muted); }
 @media (min-width: 1800px) {
