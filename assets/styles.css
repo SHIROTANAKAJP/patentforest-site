@@ -367,7 +367,7 @@ button.btn{border:0;font-family:inherit;line-height:inherit;cursor:pointer}
 @media (max-width: 1100px) { .fx li.in b { display: inline; margin-right: 6px; font-size: 13px; } }
 
 /* services */
-.svc-intro { margin: 0 0 32px; color: var(--muted); max-width: 760px; }
+.svc-intro { margin: 0 0 32px; }
 .svc {
   display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px 40px;
   background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 36px;
