@@ -600,3 +600,5 @@ body.gated main, body.gated footer { visibility: hidden; }
 .pa-track + .pa-track { padding-top: 40px; border-top: 1px solid var(--line); }
 .pa-track .svc-badge { margin-bottom: 0; }
 .pa-track .pa-shift { margin-top: 16px; }
+.pa-shift li b { display: block; color: var(--navy); font-size: 15px; }
+.pa-shift li + li { margin-top: 10px; }
