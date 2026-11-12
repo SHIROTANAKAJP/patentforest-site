@@ -602,3 +602,5 @@ body.gated main, body.gated footer { visibility: hidden; }
 .pa-track .pa-shift { margin-top: 16px; }
 .pa-shift li b { display: block; color: var(--navy); font-size: 15px; }
 .pa-shift li + li { margin-top: 10px; }
+.site-header nav a.lang { white-space: nowrap; }
+@media (max-width: 560px) { .site-header nav a.for-pa { font-size: 12px; padding: 3px 10px; } .site-header nav { gap: 10px; } }

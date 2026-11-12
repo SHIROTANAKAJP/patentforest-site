@@ -15,7 +15,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://patentforest.com/"/>
   </url>
   <url>
+    <loc>https://patentforest.com/attorney/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://patentforest.com/attorney/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://patentforest.com/ja/attorney/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://patentforest.com/attorney/"/>
+  </url>
+  <url>
     <loc>https://patentforest.com/ja/attorney/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://patentforest.com/attorney/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://patentforest.com/ja/attorney/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://patentforest.com/attorney/"/>
   </url>
 </urlset>
