@@ -27,7 +27,7 @@
   });
 })();
 
-// Case video in the Verify card plays in place, at the size it is shown.
+// Case videos in the service cards play in place, at the size it is shown.
 (function () {
   document.querySelectorAll('[data-inline]').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -42,6 +42,8 @@
       v.appendChild(s); box.appendChild(v);
       btn.replaceWith(box);
       var p = v.play(); if (p && p.catch) p.catch(function () {});
+      // only one case video plays at a time
+      v.addEventListener('play', function () { document.querySelectorAll('.pv-video video').forEach(function (o) { if (o !== v) o.pause(); }); });
     });
   });
 })();
