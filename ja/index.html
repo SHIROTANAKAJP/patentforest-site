@@ -17,10 +17,12 @@
 <link rel="icon" href="../assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/styles.css?v=36">
+<link rel="stylesheet" href="../assets/home.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="ja">
+<body class="ja v2">
 
 <header class="site-header">
   <div class="wrap">
@@ -40,18 +42,19 @@
 
 <main id="top">
 
-<section class="dark hero">
-  <div class="circle c1"></div><div class="circle c2"></div>
+<section class="h-hero">
+  <canvas aria-hidden="true"></canvas>
   <div class="wrap">
-    <p class="eyebrow">研究開発・知財部門・特許事務所のための先行技術調査サービス</p>
-    <h1><span class="nw">AIによる</span><span class="nw">先行技術調査と</span><br class="br-wide"><span class="nw">審査</span><span class="nw">シミュレーション。</span></h1>
-    <p class="tagline">請求項・明細書、やりたいこと、製品仕様から、先行文献の検索と分析を行います。</p>
-    <p class="lead">国際調査報告（ISR）と同じX・Y・A区分で整理します。</p>
-    <div class="actions">
-      <button class="btn" type="button" data-popup="../assets/video/case-oxyhalide.mp4" data-poster="../assets/video/case-oxyhalide-poster.jpg" data-caption="事例：オキシハライド固体電解質（約50秒・英語）">▶ 事例動画を見る</button>
-      <a class="btn" href="mailto:info@patentforest.com?subject=Patentforest%20%E7%84%A1%E6%96%99%E4%BD%93%E9%A8%93">▶ 無料で試す</a>
+    <p class="h-eyebrow rv">研究開発・知財部門・特許事務所のための先行技術調査サービス</p>
+    <h1 class="rv d1"><span class="nw">AIによる</span><span class="nw">先行技術調査と</span><br class="br-wide"><em class="grad"><span class="nw">審査</span><span class="nw">シミュレーション。</span></em></h1>
+    <p class="tagline rv d2">請求項・明細書、やりたいこと、製品仕様から、先行文献の検索と分析を行います。</p>
+    <p class="lead rv d2">国際調査報告（ISR）と同じX・Y・A区分で整理します。</p>
+    <div class="h-btns rv d3">
+      <a class="h-btn fill" href="mailto:info@patentforest.com?subject=Patentforest%20%E7%84%A1%E6%96%99%E4%BD%93%E9%A8%93">▶ 無料で試す</a>
+      <button class="h-btn line" type="button" data-popup="../assets/video/case-oxyhalide.mp4" data-poster="../assets/video/case-oxyhalide-poster.jpg" data-caption="事例：オキシハライド固体電解質（約50秒・英語）">▶ 事例動画を見る</button>
     </div>
   </div>
+  <span class="h-scroll" aria-hidden="true"></span>
 </section>
 
 <div class="pa-band">
@@ -61,11 +64,13 @@
   </div>
 </div>
 
-<section class="vision">
+<section class="vision h-how">
   <div class="wrap">
-    <p class="eyebrow">仕組み</p>
-    <p class="quote">Verify・Seed・Clearの3つのサービスは、<br class="br-wide"><span>共通のアルゴリズムで分析します。</span></p>
-    <div class="lanes" role="img" aria-label="Patentforestの流れ。入口は3つ：Verify（検証）は請求項・明細書、Seed（発想支援）はやりたいこと、Clear（クリアランス予備調査）は製品仕様。どの入口も、要素アルゴリズム（要素化・先行検索、マップ化・ポジショニング）と審査アルゴリズム（審査シミュレーション）を通り、可視化レポートにまとめます。特許性・侵害の判断は行いません。弁理士にご相談ください。">
+    <div class="h-head rv">
+      <p class="h-eyebrow">仕組み</p>
+      <h2 class="h-title">Verify・Seed・Clearの3つのサービスは、<br class="br-wide"><span>共通のアルゴリズムで分析します。</span></h2>
+    </div>
+    <div class="lanes rv" role="img" aria-label="Patentforestの流れ。入口は3つ：Verify（検証）は請求項・明細書、Seed（発想支援）はやりたいこと、Clear（クリアランス予備調査）は製品仕様。どの入口も、要素アルゴリズム（要素化・先行検索、マップ化・ポジショニング）と審査アルゴリズム（審査シミュレーション）を通り、可視化レポートにまとめます。特許性・侵害の判断は行いません。弁理士にご相談ください。">
       <p class="lanes-cap">Patentforestの処理の流れ</p>
       <div class="eng">
         <div class="eng-in">
@@ -91,119 +96,124 @@
   </div>
 </section>
 
-<section id="accuracy">
+<section id="accuracy" class="h-acc">
   <div class="wrap">
-    <p class="eyebrow">アルゴリズム</p>
-    <h2>審査アルゴリズムの精度</h2>
-    <p class="sub-h">ISRがXとした項は全項一致、全体の一致率は94%</p>
-    <div class="stat-row">
-      <div class="card"><div class="v">100<small>%</small></div><p>ISRがXの項の一致率（42/42）</p></div>
-      <div class="card"><div class="v">70<small>%</small></div><p>ISRがY・Aの項の一致率（7/10）</p></div>
-      <div class="card"><div class="v">94<small>%</small></div><p>全体の一致率（49/52）</p></div>
+    <div class="h-head rv">
+      <p class="h-eyebrow">アルゴリズム</p>
+      <h2 class="h-title">審査アルゴリズムの精度</h2>
+      <p class="h-sub">ISRがXとした項は全項一致、全体の一致率は94%</p>
+    </div>
+    <div class="h-stats rv">
+      <div class="h-stat"><div class="v grad" data-count="100">100<small>%</small></div><p>ISRがXの項の一致率（42/42）</p></div>
+      <div class="h-stat"><div class="v grad" data-count="70">70<small>%</small></div><p>ISRがY・Aの項の一致率（7/10）</p></div>
+      <div class="h-stat"><div class="v grad" data-count="94">94<small>%</small></div><p>全体の一致率（49/52）</p></div>
     </div>
     <p class="note">※ Y・Aの区分は、組合せロジックの見直しと技術常識（CGK）ライブラリの拡充により、精度向上を継続中です。分析結果には誤りが含まれる場合があります。<br>
     社内調べ</p>
   </div>
 </section>
 
-<section id="services">
+<section id="services" class="h-svc">
   <div class="wrap">
-    <p class="eyebrow">サービス</p>
-    <h2>3つのサービス</h2>
-    <p class="sub-h svc-intro">入口は請求項・明細書、やりたいこと、製品仕様の3つです。</p>
-  <article class="svc svc-verify" id="verify">
-    <div class="svc-main">
-      <div class="svc-badge"><span class="svc-logo" aria-hidden="true">V</span><div><b>Verify</b><small>検証</small></div></div>
-      <h3>審査シミュレーション</h3>
-      <p>請求項や明細書を入力すると、先行文献を検索・分析し、国際調査報告（ISR）と同じX・Y・A区分で整理します。</p>
+    <div class="h-head rv">
+      <p class="h-eyebrow">サービス</p>
+      <h2 class="h-title">3つのサービス</h2>
+      <p class="h-sub">入口は請求項・明細書、やりたいこと、製品仕様の3つです。</p>
     </div>
-    <button class="svc-video" type="button" data-inline="../assets/video/case-oxyhalide.mp4" data-poster="../assets/video/case-oxyhalide-poster.jpg" data-caption="事例：オキシハライド固体電解質（約50秒・英語）"><img src="../assets/video/case-oxyhalide-poster.jpg" alt="事例動画"><span>▶ 事例動画を見る（50秒）</span></button>
-    <ul class="svc-feats">
-      <li><b>要素化</b>請求項・明細書の要素を自動抽出</li>
-      <li><b>先行検索</b>ISR引用文献の80%が上位50件に包含（当社調べ）</li>
-      <li><b>マップ化</b>特許マップ上で技術ポジションを可視化</li>
-      <li><b>重複度チェック</b>要素ごとに重複度をスコア化。物理的・科学的な必然性や、概念の包含関係も考慮</li>
-      <li><b>飛躍度チェック</b>複数文献の組み合わせから、飛躍度をスコア化</li>
-      <li><b>X・Y・A区分</b>国際調査報告（ISR）と同じX・Y・A区分で整理</li>
-      <li><b>技術調査レポート</b>要素・分析内容・先行文献を3列で可視化</li>
-      <li><b>次のステップへ</b>発明者や特許生成AIにフィードバック（Patentforestは、請求項や意見書を作成しません。）</li>
-    </ul>
-  </article>
-  <article class="svc svc-seed" id="seed">
-    <div class="svc-main">
-      <div class="svc-badge"><span class="svc-logo" aria-hidden="true">S</span><div><b>Seed</b><small>発想支援</small></div><span class="svc-tag">近日公開</span></div>
-      <h3>シーズアイデア</h3>
-      <p>やりたいことを入力すると、既存製品の改良（性能向上・コスト低減）とは別の方向のアイデアを、5つの異分野の特許の要素を組み合わせて探します。</p>
-    </div>
-
-    <ul class="svc-feats">
-      <li><b>やりたいこと入力</b>解決したい課題を入力</li>
-      <li><b>異分野の指定</b>5つの異分野を「おまかせ」か、CPCの技術領域から選択</li>
-      <li><b>要素抽出</b>分野ごとに上位の特許から要素を抽出</li>
-      <li><b>アイデア化</b>異分野の要素を組み合わせ、AIが複数のアイデア案を生成</li>
-      <li><b>Verifyへ</b>選んだ案を、そのまま審査シミュレーションへ</li>
-    </ul>
-  </article>
-  <article class="svc svc-clear" id="clear">
-    <div class="svc-main">
-      <div class="svc-badge"><span class="svc-logo" aria-hidden="true">C</span><div><b>Clear</b><small>クリアランス予備調査</small></div><span class="svc-tag">近日公開</span></div>
-      <h3>製品仕様からの他社特許調査</h3>
-      <p>製品仕様を入力すると、類似する他社特許の要素をリスト化します。結果はX・A区分で整理します。</p>
-    </div>
-
-    <ul class="svc-feats">
-      <li><b>要素化</b>製品仕様を、構成要素に分解します。</li>
-      <li><b>特許検索</b>構成要素レベルで、他社特許を検索します。</li>
-      <li><b>マップ化</b>製品と他社特許の構成要素を対応づけ、マップ化します。</li>
-      <li><b>類似リスト化</b>構成要素の対応から、類似する他社特許をリストにします。</li>
-      <li><b>X・Aシミュレーション</b>類似する他社特許を、X・A区分で整理します。侵害の判断は行いません。</li>
-    </ul>
-  </article>
-  </div>
-</section>
-
-<section id="trust" style="background:var(--white)">
-  <div class="wrap">
-    <p class="eyebrow">セキュリティ</p>
-    <h2>セキュリティー対策</h2>
-    <p class="sub-h">出願前の発明を扱う前提で設計</p>
-    <div class="trust" style="grid-template-columns: 1fr; max-width: 820px">
-      <div class="card">
-        <h3>機密情報の取り扱い</h3>
-        <ul>
-          <li>AWS東京リージョンで稼働</li>
-          <li>ClaudeとOpenAIのAPIをZero Data Retentionで使用し、入力・出力は保存も学習利用もされません</li>
-          <li>発明内容はログに記録しません</li>
-          <li>分析結果は処理完了後30分で自動削除</li>
-          <li>セキュリティー事業者との連携</li>
-        </ul>
+    <div class="h-tiles">
+    <article class="h-tile wide rv" id="verify">
+      <div class="tile-head">
+        <div class="tile-badge"><span class="tile-logo" aria-hidden="true">V</span><div><b>Verify</b><small>検証</small></div></div>
+        <h3>審査シミュレーション</h3>
+        <p>請求項や明細書を入力すると、先行文献を検索・分析し、国際調査報告（ISR）と同じX・Y・A区分で整理します。</p>
       </div>
+      <button class="pv-video" type="button" data-inline="../assets/video/case-oxyhalide.mp4" data-poster="../assets/video/case-oxyhalide-poster.jpg" data-caption="事例：オキシハライド固体電解質（約50秒・英語）"><img src="../assets/video/case-oxyhalide-poster.jpg" alt="事例動画"><span>▶ 事例動画を見る（50秒）</span></button>
+      <ol class="h-feats">
+        <li><b>要素化</b>請求項・明細書の要素を自動抽出</li>
+        <li><b>先行検索</b>ISR引用文献の80%が上位50件に包含（当社調べ）</li>
+        <li><b>マップ化</b>特許マップ上で技術ポジションを可視化</li>
+        <li><b>重複度チェック</b>要素ごとに重複度をスコア化。物理的・科学的な必然性や、概念の包含関係も考慮</li>
+        <li><b>飛躍度チェック</b>複数文献の組み合わせから、飛躍度をスコア化</li>
+        <li><b>X・Y・A区分</b>国際調査報告（ISR）と同じX・Y・A区分で整理</li>
+        <li><b>技術調査レポート</b>要素・分析内容・先行文献を3列で可視化</li>
+        <li><b>次のステップへ</b>発明者や特許生成AIにフィードバック（Patentforestは、請求項や意見書を作成しません。）</li>
+      </ol>
+    </article>
+    <article class="h-tile  rv d1" id="seed">
+      <div class="tile-head">
+        <div class="tile-badge"><span class="tile-logo" aria-hidden="true">S</span><div><b>Seed</b><small>発想支援</small></div><span class="svc-tag">近日公開</span></div>
+        <h3>シーズアイデア</h3>
+        <p>やりたいことを入力すると、既存製品の改良（性能向上・コスト低減）とは別の方向のアイデアを、5つの異分野の特許の要素を組み合わせて探します。</p>
+      </div>
+      <ol class="h-feats">
+        <li><b>やりたいこと入力</b>解決したい課題を入力</li>
+        <li><b>異分野の指定</b>5つの異分野を「おまかせ」か、CPCの技術領域から選択</li>
+        <li><b>要素抽出</b>分野ごとに上位の特許から要素を抽出</li>
+        <li><b>アイデア化</b>異分野の要素を組み合わせ、AIが複数のアイデア案を生成</li>
+        <li><b>Verifyへ</b>選んだ案を、そのまま審査シミュレーションへ</li>
+      </ol>
+    </article>
+    <article class="h-tile  rv d2" id="clear">
+      <div class="tile-head">
+        <div class="tile-badge"><span class="tile-logo" aria-hidden="true">C</span><div><b>Clear</b><small>クリアランス予備調査</small></div><span class="svc-tag">近日公開</span></div>
+        <h3>製品仕様からの他社特許調査</h3>
+        <p>製品仕様を入力すると、類似する他社特許の要素をリスト化します。結果はX・A区分で整理します。</p>
+      </div>
+      <ol class="h-feats">
+        <li><b>要素化</b>製品仕様を、構成要素に分解します。</li>
+        <li><b>特許検索</b>構成要素レベルで、他社特許を検索します。</li>
+        <li><b>マップ化</b>製品と他社特許の構成要素を対応づけ、マップ化します。</li>
+        <li><b>類似リスト化</b>構成要素の対応から、類似する他社特許をリストにします。</li>
+        <li><b>X・Aシミュレーション</b>類似する他社特許を、X・A区分で整理します。侵害の判断は行いません。</li>
+      </ol>
+    </article>
     </div>
   </div>
 </section>
 
-<section id="faq">
+<section id="trust" class="h-sec">
   <div class="wrap">
-    <p class="eyebrow">よくある質問</p>
-    <h2>よくある質問</h2>
-    <dl class="faq">
-      <div class="card"><dt>新規性・進歩性の判定や鑑定はできますか？</dt><dd>Patentforestは、新規性・進歩性の判定や特許の鑑定を行うものではありません。重複度は新規性の、飛躍度は進歩性の検討材料としてお使いいただけます。判定・鑑定は弁理士にご相談ください。</dd></div>
-      <div class="card"><dt>審査シミュレーションとは何ですか？</dt><dd>請求項や明細書の構成要素ごとに先行文献と照合して重複度・飛躍度をスコア化し、国際調査報告（ISR）と同じX・Y・A区分で整理します。実際の審査結果を保証するものではありません。</dd></div>
-    </dl>
+    <div class="h-head rv">
+      <p class="h-eyebrow">セキュリティ</p>
+      <h2 class="h-title">セキュリティー対策</h2>
+      <p class="h-sub">出願前の発明を扱う前提で設計</p>
+    </div>
+    <p class="h-sec-cap rv">機密情報の取り扱い</p>
+    <ul class="h-sec-grid rv">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9.5z"/></svg>AWS東京リージョンで稼働</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg>ClaudeとOpenAIのAPIをZero Data Retentionで使用し、入力・出力は保存も学習利用もされません</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z"/><path d="M14 2.5V8h5.5"/><path d="M3.5 3.5l17 17"/></svg>発明内容はログに記録しません</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>分析結果は処理完了後30分で自動削除</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6.5v5c0 4.6 3.4 8.4 8 9.5 4.6-1.1 8-4.9 8-9.5v-5z"/><path d="m8.8 12.2 2.3 2.3 4.2-4.6"/></svg>セキュリティー事業者との連携</li>
+    </ul>
   </div>
 </section>
 
-<section id="plans" class="dark soon">
-  <div class="circle c1"></div><div class="circle c2"></div>
+<section id="faq" class="h-faq">
   <div class="wrap">
-    <span class="pill-teal">COMING SOON</span>
-    <h2>2026年12月 公開予定</h2>
-    <p class="sub">無料体験の受付を近日開始します。</p>
-    <div class="plans">
-      <div class="card"><p class="label">プラン</p><h3>一般SaaS版</h3><p>ブラウザから利用します。請求項を入力すると、検索から分析、報告書の作成まで行います。</p></div>
-      <div class="card"><p class="label">プラン</p><h3>顧客サーバ版</h3><p>お客様のサーバ環境で稼働。技術ライブラリー（辞書）と分析ルールを、自社の技術領域に合わせて追加・拡張できます。</p></div>
+    <div class="h-head rv">
+      <p class="h-eyebrow">よくある質問</p>
+      <h2 class="h-title">よくある質問</h2>
     </div>
-    <a class="btn" href="mailto:info@patentforest.com?subject=Patentforest%20%E7%84%A1%E6%96%99%E4%BD%93%E9%A8%93">無料体験について問い合わせる</a>
+    <div class="h-qa rv">
+      <details><summary>新規性・進歩性の判定や鑑定はできますか？</summary><p>Patentforestは、新規性・進歩性の判定や特許の鑑定を行うものではありません。重複度は新規性の、飛躍度は進歩性の検討材料としてお使いいただけます。判定・鑑定は弁理士にご相談ください。</p></details>
+      <details><summary>審査シミュレーションとは何ですか？</summary><p>請求項や明細書の構成要素ごとに先行文献と照合して重複度・飛躍度をスコア化し、国際調査報告（ISR）と同じX・Y・A区分で整理します。実際の審査結果を保証するものではありません。</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="plans" class="h-cta">
+  <div class="wrap">
+    <div class="h-head rv">
+      <span class="pill-teal">COMING SOON</span>
+      <h2 class="h-title">2026年12月 公開予定</h2>
+      <p class="h-sub">無料体験の受付を近日開始します。</p>
+    </div>
+    <div class="h-plans rv">
+      <div><p class="label">プラン</p><h3>一般SaaS版</h3><p>ブラウザから利用します。請求項を入力すると、検索から分析、報告書の作成まで行います。</p></div>
+      <div><p class="label">プラン</p><h3>顧客サーバ版</h3><p>お客様のサーバ環境で稼働。技術ライブラリー（辞書）と分析ルールを、自社の技術領域に合わせて追加・拡張できます。</p></div>
+    </div>
+    <div class="h-btns rv"><a class="h-btn fill" href="mailto:info@patentforest.com?subject=Patentforest%20%E7%84%A1%E6%96%99%E4%BD%93%E9%A8%93">無料体験について問い合わせる</a></div>
     <p class="contact">お問い合わせ：田中 詩郎・<a href="mailto:info@patentforest.com">info@patentforest.com</a></p>
   </div>
 </section>
@@ -220,6 +230,7 @@
 
 <script src="../assets/lightbox.js?v=2"></script>
 <script src="../assets/attorney-gate.js?v=1"></script>
+<script src="../assets/home.js?v=1"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e10f29641b3348acbeb93f11e4962444"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
